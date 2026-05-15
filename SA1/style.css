@@ -1,0 +1,137 @@
+/* ===== GLOBAL ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+body { background-color: #f4f4f4; padding: 30px; color: #333; }
+
+/* ===== CONTAINER & HEADINGS ===== */
+.container { max-width: 750px; margin: 40px auto; background: #fff; padding: 35px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+h2 { text-align: center; color: #333; margin-bottom: 25px; border-bottom: 3px solid #6c699b; padding-bottom: 10px; }
+h3 { color: #333; margin-bottom: 15px; }
+
+/* ===== FORM GRID & INPUTS ===== */
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+.form-group { margin-bottom: 15px; }
+.form-group.full { grid-column: span 2; }
+label { display: block; margin-bottom: 6px; font-weight: 600; color: #666; }
+input, select { 
+    width: 100%; padding: 10px; border: 1px solid #6c699b; border-radius: 6px; 
+    font-size: 14px; transition: border 0.3s, box-shadow 0.3s; background: #fff; color: #333; 
+}
+input:focus, select:focus { outline: none; border-color: #57537f; box-shadow: 0 0 0 3px rgba(108, 105, 155, 0.2); }
+
+/* ===== BUTTONS ===== */
+.btn { 
+    width: 100%; padding: 12px; background: #6c699b; color: #fff; border: none; 
+    border-radius: 6px; font-size: 16px; cursor: pointer; margin-top: 10px; transition: background 0.3s; 
+}
+.btn:hover { background: #57537f; }
+
+/* ===== OUTPUT SECTION ===== */
+.output-card { 
+    background: #fafafa; padding: 20px; border-radius: 8px; border-left: 5px solid #6c699b; 
+    margin-top: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); 
+}
+.output-row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #c8c8c8; }
+.output-row:last-child { border-bottom: none; }
+.label { font-weight: bold; color: #666; width: 40%; }
+.value { color: #333; text-align: right; }
+
+/* ===== BACK BUTTON ===== */
+.back-btn { 
+    display: inline-block; margin-top: 20px; padding: 12px 20px; background: #6c699b; 
+    color: #fff; text-decoration: none; border-radius: 6px; transition: background 0.3s; 
+}
+.back-btn:hover { background: #57537f; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) { 
+    .form-grid { grid-template-columns: 1fr; } 
+    .form-group.full { grid-column: span 1; } 
+}
+
+/* ========================================= */
+/* ===== MULTIPLICATION TABLE (Activity 2) ===== */
+/* ========================================= */
+.table-wrapper {
+    margin: 20px auto;
+    overflow-x: auto;
+}
+.mult-table {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: 15px;
+}
+.mult-table th, .mult-table td {
+    border: 1px solid #c8c8c8;
+    padding: 12px;
+    text-align: center;
+}
+.mult-table thead th {
+    background-color: #6c699b;
+    color: #fff;
+    font-weight: 600;
+}
+.mult-table tbody th {
+    background-color: #f4f4f4;
+    color: #333;
+    font-weight: 600;
+}
+.row-even { background-color: #fafafa; }
+.row-odd  { background-color: #ffffff; }
+.mult-table tr:hover td, .mult-table tr:hover th {
+    background-color: #e8e6f0;
+    transition: background 0.2s;
+}
+
+/* ========================================= */
+/* ===== HOMEPAGE CARDS (NEW - Fixes invisible buttons) ===== */
+/* ========================================= */
+.card-container { 
+    display: flex; 
+    gap: 20px; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    margin-top: 30px;
+} 
+
+.card { 
+    background: white; 
+    width: 250px; 
+    padding: 30px 20px; 
+    border-radius: 12px; 
+    text-decoration: none; 
+    color: #333; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    text-align: center;
+} 
+
+.card:hover { 
+    transform: translateY(-5px); 
+    background-color: #6c699b; 
+    color: white;
+    border-color: #57537f;
+    box-shadow: 0 8px 20px rgba(108, 105, 155, 0.3);
+} 
+
+.card h2 { 
+    margin-bottom: 10px; 
+    font-size: 18px;
+    color: inherit;
+}
+
+.card p {
+    font-size: 14px;
+    color: #666;
+    transition: color 0.3s;
+}
+
+.card:hover p {
+    color: #f4f4f4;
+}
