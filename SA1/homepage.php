@@ -8,20 +8,19 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="title">PHP OPERATORS AND CONTROL STRUCTURE</h1>
+        <h1 class="title">PHP OUTPUT, VARIABLE FAMILIARIZATION, OPERATORS AND CONTROL STRUCTURE </h1>
         <p class="subtitle">Choose an activity</p>
 
         <div class="card-container">
-            <!-- Card 1: Student Registration Form -->
+
             <a href="one.php" class="card">
-                <h2>Student Registration</h2>
-                <p>Activity 1: Variables & String Formatting</p>
+                <h2>Student Form</h2>
+                <p>Personal & Education information</p>
             </a>
 
-            <!-- Card 2: Multiplication Table -->
             <a href="two.php" class="card">
                 <h2>Multiplication Table</h2>
-                <p>Activity 2: Control Structures & Loops</p>
+                <p>Purple and grey</p>
             </a>
         </div>
     </div>
