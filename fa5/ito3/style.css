@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    padding: 30px;
+    color: #333;
+}
+
+.container {
+    max-width: 750px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #6c699b;
+    padding-bottom: 10px;
+}
+
+h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group.full {
+    grid-column: span 2;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #666;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #6c699b;
+    border-radius: 6px;
+    font-size: 14px;
+    background: #fff;
+    color: #333;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #57537f;
+    box-shadow: 0 0 0 3px rgba(108, 105, 155, 0.2);
+}
+
+.btn,
+.back-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #6c699b;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.back-btn {
+    margin-top: 20px;
+}
+
+.btn:hover,
+.back-btn:hover {
+    background: #57537f;
+}
+
+.output-card {
+    background: #fafafa;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 8px;
+    border-left: 5px solid #6c699b;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.output-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #c8c8c8;
+}
+
+.output-row:last-child {
+    border-bottom: none;
+}
+
+.label {
+    width: 40%;
+    font-weight: bold;
+    color: #666;
+}
+
+.value {
+    width: 60%;
+    color: #333;
+    text-align: right;
+    word-break: break-word;
+}
+
+@media (max-width: 600px) {
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full {
+        grid-column: span 1;
+    }
+
+    .output-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .label,
+    .value {
+        width: 100%;
+        text-align: left;
+    }
+
+}
