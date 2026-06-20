@@ -1,0 +1,2 @@
+<h3>Career Objective</h3>
+<p>To obtain a challenging position in the field of Information Technology where I can utilize my technical skills and knowledge in web and mobile application development. Committed to continuous learning and applying best practices in software development, emerging technologies, and contributing to innovative projects that make a positive impact.</p>
