@@ -1,0 +1,287 @@
+:root {
+    /* COLOR VALUES */
+    --main-bg-color: #f4f4f4;
+    --banner-bg-color: #6c699b;
+    --main-content-bg-color: #eeedf7;
+    --footer-bg-color: #57537f;
+    --nav-button-bg-color: #57537f;
+    
+    /* GAPS, SIZING, AND BORDERS */
+    --gap-size: 15px;
+    --margin: 8px;
+    --container-padding: 15px;
+    --padding: 5px;
+    --border-radius: 10px;
+
+    /* FONTS AND FONT SIZES */
+    --main-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --title-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --banner-title: 3.5rem;
+    --content-size: 1.2rem;
+}
+
+* { 
+    box-sizing: border-box; 
+    padding: 0; 
+    margin: 0; 
+    font-family: var(--main-font);
+}
+
+body { 
+    padding: var(--gap-size); 
+    background-color: var(--main-bg-color); 
+}
+
+.container { 
+    display: grid; 
+    grid-template-rows: auto 1fr auto; 
+    min-height: 100vh; 
+}
+
+.header { 
+    display: grid; 
+    grid-template-columns: 3fr auto; 
+    margin: var(--gap-size); 
+    padding: var(--container-padding); 
+    background-color: var(--banner-bg-color); 
+    border-radius: var(--border-radius); 
+    color: white;
+    box-shadow: 0 4px 10px rgba(108, 105, 155, 0.2);
+}
+
+.header h1 { 
+    font-family: var(--title-font); 
+    font-size: var(--banner-title); 
+}
+
+.navigation ul { 
+    display: flex; 
+    align-items: center; 
+    list-style: none; 
+    height: 100%; 
+}
+
+.navigation ul a { 
+    text-decoration: none; 
+    color: white; 
+    margin: var(--margin); 
+    padding: var(--container-padding); 
+    background-color: var(--nav-button-bg-color); 
+    border: 1px solid rgba(255,255,255,0.2); 
+    border-radius: 6px; 
+    transition: transform 0.3s ease, background-color 0.3s;
+}
+
+.navigation ul a:hover {
+    background-color: #3f3c60;
+}
+
+.main-content { 
+    margin: var(--gap-size); 
+    padding: var(--container-padding); 
+    border-radius: var(--border-radius); 
+    background-color: var(--main-content-bg-color); 
+}
+
+.main-content h2, 
+.main-content p { 
+    margin-bottom: var(--margin);
+    color: #333;
+}
+
+/* ===== ACTIVITY A NO. 1 REGISTRATION ===== */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: grid;
+    gap: 6px;
+}
+
+.form-group.full {
+    grid-column: 1 / 3;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: var(--footer-bg-color);
+}
+
+.form-group input {
+    padding: 12px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: white;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--banner-bg-color);
+    box-shadow: 0 0 5px rgba(108, 105, 155, 0.3);
+}
+
+.btn {
+    padding: 12px 25px;
+    background-color: var(--banner-bg-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--footer-bg-color);
+}
+
+.success-message {
+    padding: 12px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.error-message {
+    padding: 12px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.output-card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 25px;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--banner-bg-color);
+    box-shadow: 0 4px 10px rgba(108, 105, 155, 0.2);
+}
+
+.output-card h3 {
+    color: var(--banner-bg-color);
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--main-content-bg-color);
+}
+
+.output-row {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.output-row:last-child {
+    border-bottom: none;
+}
+
+.output-row .label {
+    font-weight: bold;
+    color: var(--footer-bg-color);
+}
+
+.output-row .value {
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .header {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .header h1 {
+        font-size: 2.5rem;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full {
+        grid-column: 1;
+    }
+
+    .output-row {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+}
+
+/* ===== ACTIVITY A NO. 2 LOGIN ===== */
+.login-box {
+    max-width: 400px;
+    background-color: white;
+    padding: 25px;
+    margin: 20px auto 0 auto;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--banner-bg-color);
+    box-shadow: 0 4px 10px rgba(108, 105, 155, 0.2);
+}
+
+.remember-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.remember-row input {
+    width: 16px;
+    height: 16px;
+}
+
+.remember-row label {
+    color: var(--footer-bg-color);
+    font-weight: bold;
+}
+
+.login-title {
+    text-align: center;
+}
+
+/* ===== ACTIVITY B BUTTON ROW ===== */
+.button-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.button-row .btn,
+.button-row .back-btn {
+    margin-top: 0;
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: var(--banner-bg-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: var(--footer-bg-color);
+}
